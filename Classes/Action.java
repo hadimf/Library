@@ -145,9 +145,11 @@ public class Action {
                 System.out.println("Enter Id of Book: ");
                 byte bookId = Byte.parseByte(System.console().readLine());
                 boolean isExist = Book.checkExist(bookId);
+                book = Book.setBookById(bookId);
                 if (isExist) {
                     if (person != null) {
                         person.loanedBookIds.add(bookId);
+                        person.loanedBooks.add(book);
                         
                     } else {
                         System.out.println("Problem");

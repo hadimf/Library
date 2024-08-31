@@ -14,6 +14,13 @@ public class Book {
     public byte getID() {
         return ID;
     }
+    public String getTitle() {
+        return _title;
+    }
+    public float getPrice() {
+        return _price;
+    }
+    
 
     public Book() {
         this.ID = 0;

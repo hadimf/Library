@@ -9,6 +9,7 @@ public class Person {
     private short _age;
     private char _gender;
     public ArrayList<Byte> loanedBookIds;
+    public ArrayList<Book> loanedBooks = new ArrayList<>();
 
     private static HashMap<Byte, Person> _persons = new HashMap<>();
     private static byte _count;
@@ -58,8 +59,16 @@ public class Person {
         } else {
             System.out.println("Not Found");
         }
-        for (byte bookid : loanedBookIds) {
-            System.out.println("book id: " + bookid);
+        // for (byte bookid : loanedBookIds) {
+        //     System.out.println("book id: " + bookid);
+        // }
+
+        for (Book book : loanedBooks) {
+            System.out.println("...............................");
+            System.out.println("Book Id " + book.getID());
+            System.out.println("Book Title " + book.getTitle());
+            System.out.println("Book Price " + book.getPrice());
+            System.out.println("...............................");
         }
 
     }
